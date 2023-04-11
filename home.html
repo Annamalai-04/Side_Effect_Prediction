@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Website</title>
+	<script>
+		window.onload = function() {
+			document.getElementById('signup').style.display='block';
+			document.getElementById('signin').style.display='block';
+
+		}
+	
+
+	</script>
+	<style>
+		#signup {
+			display: none;
+			position: fixed;
+			top: 50%;
+			left: 65%;
+			transform: translate(-50%, -50%);
+			background-color: #fff;
+			padding: 30px;
+			border: 1px solid #ccc;
+			box-shadow: 0 0 10px #ccc;
+		}
+		#signin {
+			display: none;
+			position: fixed;
+			top: 50%;
+			left: 40%;
+			transform: translate(-50%, -50%);
+			background-color: #fff;
+			padding: 20px;
+			border: 1px solid #ccc;
+			box-shadow: 0 0 10px #ccc;
+		}
+		
+
+/**.b {
+	font-size: 50px;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 10px;
+  color: tomato;
+    animation: blink-animation 1s steps(2, start) infinite;
+
+}
+@keyframes blink-animation {
+  
+  
+  to {
+    visibility: hidden;
+  }
+}**/
+
+
+		.close-btn {
+			position: absolute;
+			top: 5px;
+			right: 10px;
+			cursor: pointer;
+		}
+		 body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        background-image: url('1.jpg');
+        background-size: cover;
+      }
+      form {
+        background-color: #fff;
+        padding: 40px;
+        max-width: 400px;
+        margin: 20 auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+	</style>
+
+</head>
+<body>
+	</body>
+
+	<div id="signup">
+		<h2>Signup Form</h2>
+	<form method="POST" action="test.php">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name"><br>
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email"><br>
+		<label for="password">Passward:</label>
+		<input type="password" id="password" name="password"><br>
+		<input type="submit" value="Submit" name="submit">
+	</form>
+	
+
+		<span class="close-btn" onclick="document.getElementById('signup').style.display='none'">&times;</span>
+	</div>
+	<div id="signin">
+	<form action="login.php" method="GET">
+		<input type="submit" value="Login">
+	</form>
+			<span class="close-btn" onclick="document.getElementById('signin').style.display='none'">&times;</span>
+			 
+</div>
+</body>
+</html>
